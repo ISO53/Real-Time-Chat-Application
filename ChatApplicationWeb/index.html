@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css">
+	<title>ChatApp</title>
+</head>
+
+<body>
+	<div class="main_div">
+
+		<div class="options">
+
+			<input type="radio" id="chats" name="selector">
+			<label for="chats" id="chats_button">
+				<svg class="radio_svg" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#413543">
+					<path d="M42 788V193.8q0-21.265 17.325-39.533Q76.65 136 99 136h528.836q23.489 0 40.826 17.825Q686 171.65 686 194v367.082q0 22.543-17.613 40.23Q650.775 619 628 619H211L42 788Zm244.479 64q-23.329 0-40.404-18.612Q229 814.775 229 793V679h517V323h115.773q21.727 0 38.977 18.325Q918 359.65 918 382v633L755 852H286.479Z" />
+				</svg>
+			</label>
+
+			<input type="radio" id="persons" name="selector">
+			<label for="persons" id="persons_button">
+				<svg class="radio_svg" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48" fill="#413543">
+					<path d="M22 926V810q0-42.313 21.383-75.459t59.661-50.563Q178 652 238.443 637t124.572-15q66.047 0 126.016 15Q549 652 624 684q38.156 15.844 60.078 49.149Q706 766.453 706 809.945V926H22Zm755 0V812q0-65-32.5-108T659 624q60 10 113 24.5t88.88 31.939q34.958 18.329 56.539 52.753Q939 767.615 939 815.054V926H777ZM364.248 562q-71.798 0-115.523-43.725Q205 474.55 205 404q0-71.55 43.769-115.775Q292.539 244 363.544 244q70.006 0 115.231 44.144Q524 332.288 524 403q0 71.55-44.865 115.275Q434.271 562 364.248 562ZM750 402.991q0 70.559-44.55 114.784Q660.901 562 590.788 562q-13.094 0-23.441-1.5T543 554q26-27.412 38.5-64.959 12.5-37.548 12.5-85.099t-12.655-84.229Q568.69 283.035 543 251.87q10.75-3.62 23.741-5.745t24.01-2.125q69.76 0 114.504 44.635Q750 333.27 750 402.991Z" />
+				</svg>
+			</label>
+
+			<input type="radio" id="login" name="selector" checked>
+			<label for="login" id="login_register_button">
+				<svg class="radio_svg" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48" fill="#413543">
+					<path d="M483-97v-91h298v-584H483v-92h298q36.125 0 63.562 27.206Q872-809.588 872-772v584q0 37.175-27.438 64.088Q817.125-97 781-97H483Zm-90-177-66-63 96-97H89v-91h332l-96-97 66-64 207 207-205 205Z" />
+				</svg>
+			</label>
+
+		</div>
+
+		<div class="option_areas">
+			<div class="tabs">
+
+				<div class="chats" id="chats_tab">
+					<div class="not_found">
+						<img class="not_found_image" src="res/not_found.png" alt="">
+						<h1 class="not_found_text">Looks like nothing found here.</h1>
+					</div>
+				</div>
+
+				<div class="persons" id="persons_tab">
+					<div class="not_found">
+						<img class="not_found_image" src="res/not_found.png" alt="">
+						<h1 class="not_found_text">Looks like nothing found here.</h1>
+					</div>
+				</div>
+
+				<div class="login_area" id="login_area_tab">
+					<div class="login_title">Login or register!</div>
+
+					<input id="name_area" class="input" type="text" pattern="[A-Za-z0-9]+" placeholder="Your Name" />
+					<input id="password_area" class="input" type="text" pattern="[A-Za-z0-9]+" placeholder="Your Password" />
+
+					<div class="buttons">
+						<button id="login_button" type="text" class="submit">Login</button>
+						<button id="register_button" type="text" class="submit_reverse">Register</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="chat_area">
+
+			<div class="chat_area_top_bar">
+				<div id="chat_area_image" class="chat_area_image"></div>
+				<div class="chat_area_infos">
+					<h1 id="chat_area_name" class="chat_area_name">Toplantı</h1>
+					<h2 id="chat_area_persons" class="chat_area_persons">Ali, Ahmet, Ayşe</h2>
+				</div>
+				<div id="open_add_user_div_button">
+					<svg id="add_user_svg" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+						<path d="M745-433v-124H621v-69h124v-123h69v123h123v69H814v124h-69Zm-383.044-60q-76.826 0-124.391-48.065Q190-589.13 190-665.296q0-76.167 47.406-123.935Q284.812-837 361.637-837q76.825 0 125.094 47.656Q535-741.688 535-664.796q0 75.666-48.109 123.731Q438.781-493 361.956-493ZM20-130v-116q0-42.887 21.695-75.661Q63.391-354.435 102-372q76-35 136.22-48.5Q298.441-434 361.262-434 426-434 486-420t136 48q38.609 17.42 60.805 49.671Q705-290.078 705-246.227V-130H20Z" />
+					</svg>
+				</div>
+			</div>
+
+			<div id="messages" class="messages"></div>
+
+			<div class="message_send_area">
+				<input id="message_input" class="message_input" type="text" placeholder="Your Message" />
+
+				<svg id="emoji_button" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+					<path d="M626-533q22.5 0 38.25-15.75T680-587q0-22.5-15.75-38.25T626-641q-22.5 0-38.25 15.75T572-587q0 22.5 15.75 38.25T626-533Zm-292 0q22.5 0 38.25-15.75T388-587q0-22.5-15.75-38.25T334-641q-22.5 0-38.25 15.75T280-587q0 22.5 15.75 38.25T334-533Zm146 272q66 0 121.5-35.5T682-393H278q26 61 81 96.5T480-261Zm0 181q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 340q142.375 0 241.188-98.812Q820-337.625 820-480t-98.812-241.188Q622.375-820 480-820t-241.188 98.812Q140-622.375 140-480t98.812 241.188Q337.625-140 480-140Z" />
+				</svg>
+
+				<svg id="attach_file" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+					<path d="M460.269-53Q357-53 285-123.764 213-194.527 213-296v-441q0-74.012 51.291-125.506Q315.583-914 389.522-914q74.177 0 125.828 51.875Q567-810.25 567-736v399.1q0 45.06-30.92 76.48T459.5-229q-46.5 0-76.5-32.5t-30-80.301V-739h63v400q0 21.025 12.487 34.513Q440.975-291 460-291q19.025 0 31.513-12.987Q504-316.975 504-337v-400q0-47-33.5-80.5T389-851q-47 0-81 33.5T274-737v443.099q0 76.387 55 128.144Q384-114 460-114q77 0 131.5-52.514T646-296.345V-739h62v442q0 101.473-72.231 172.736Q563.538-53 460.269-53Z" />
+				</svg>
+
+				<svg id="message_send_button" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+					<path d="M100-139v-246l333-95-333-97v-245l807 342-807 341Z" />
+				</svg>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="toast_div" class="hide_toast">
+		<p id="toast_message">Error.</p>
+	</div>
+
+	<div id="create_chat_div" class="create_chat_div hide_chat">
+		<p>Sohbet ismini girin.</p>
+		<input id="create_chat_area" class="input" type="text" pattern="[A-Za-z0-9]+" placeholder="Chat Name" />
+		<button id="create_chat_button" type="text" class="submit">Create</button>
+	</div>
+
+	<div id="add_user_div" class="create_chat_div hide_chat">
+		<p>Kişi ismini girin.</p>
+		<input id="add_user_area" class="input" type="text" pattern="[A-Za-z0-9]+" placeholder="Chat Name" />
+		<button id="add_user_button" type="text" class="submit">Add User</button>
+	</div>
+
+	<div id="file_drop_zone" class="file_drop_zone hide_popup">
+		<input type="file" id="file_input" accept=".png, .jpg, .jpeg, .pdf, .doc, .docx, .txt, .xlsx" multiple="false" />
+	</div>
+
+	<div id="emoji_container" class="hide_popup">
+		<span class="emoji">😀</span>
+		<span class="emoji">😃</span>
+		<span class="emoji">😄</span>
+		<span class="emoji">😁</span>
+		<span class="emoji">😆</span>
+		<span class="emoji">😅</span>
+		<span class="emoji">😂</span>
+		<span class="emoji">🤣</span>
+		<span class="emoji">😊</span>
+		<span class="emoji">😇</span>
+		<span class="emoji">🙂</span>
+		<span class="emoji">🙃</span>
+		<span class="emoji">😉</span>
+		<span class="emoji">😌</span>
+		<span class="emoji">😍</span>
+		<span class="emoji">🥰</span>
+		<span class="emoji">😘</span>
+		<span class="emoji">😗</span>
+		<span class="emoji">😙</span>
+		<span class="emoji">😚</span>
+		<span class="emoji">😋</span>
+		<span class="emoji">😛</span>
+		<span class="emoji">😝</span>
+		<span class="emoji">😜</span>
+		<span class="emoji">🤪</span>
+		<span class="emoji">🤨</span>
+		<span class="emoji">🧐</span>
+		<span class="emoji">🤓</span>
+		<span class="emoji">😎</span>
+		<span class="emoji">🤩</span>
+		<span class="emoji">🥳</span>
+		<span class="emoji">😏</span>
+		<span class="emoji">😒</span>
+		<span class="emoji">😞</span>
+		<span class="emoji">😔</span>
+		<span class="emoji">😟</span>
+		<span class="emoji">😕</span>
+		<span class="emoji">🙁</span>
+		<span class="emoji">☹️</span>
+		<span class="emoji">😣</span>
+		<span class="emoji">😖</span>
+		<span class="emoji">😫</span>
+		<span class="emoji">😩</span>
+		<span class="emoji">🥺</span>
+		<span class="emoji">😢</span>
+		<span class="emoji">😭</span>
+		<span class="emoji">😤</span>
+		<span class="emoji">😠</span>
+		<span class="emoji">😡</span>
+		<span class="emoji">🤬</span>
+		<span class="emoji">🤯</span>
+		<span class="emoji">😳</span>
+		<span class="emoji">🥵</span>
+		<span class="emoji">🥶</span>
+		<span class="emoji">😱</span>
+		<span class="emoji">😨</span>
+		<span class="emoji">😰</span>
+		<span class="emoji">😥</span>
+		<span class="emoji">😓</span>
+		<span class="emoji">🤗</span>
+		<span class="emoji">🤔</span>
+		<span class="emoji">😶</span>
+		<span class="emoji">😐</span>
+		<span class="emoji">😑</span>
+		<span class="emoji">😬</span>
+	</div>
+
+	<script src="renderer.js"></script>
+</body>
+
+</html>

@@ -10,7 +10,7 @@
   "author": "iso",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^24.1.2"
+    "electron": "^24.8.5"
   },
   "dependencies": {
     "node-notifier": "^10.0.1"
